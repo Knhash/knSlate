@@ -1,0 +1,63 @@
+# knSlate theme for GRUB
+#
+# by Knhash
+
+# General Settings
+desktop-color: "#000000"
+title-text: ""
+
+# Terminal Settings
+terminal-box: "terminal_box_*.png"
+terminal-font: "Inconsolata Regular 16"
+
+# Logo
++ image {
+	top = 50%-100
+	left = 20%-100
+	file = "knSlateLogo.png"
+}
+
+# Boot Menu
++ boot_menu {
+	left = 45%
+	width = 50%
+	top = 35%
+	height = 40%
+
+	item_font = "Inconsolata Regular 16"
+	item_color = "#839496"
+	item_height = 48
+	item_spacing = 2
+
+	selected_item_font = "Inconsolata Bold 18"
+	selected_item_color= "#FFFFFF"
+	selected_item_pixmap_style = "select_*.png"
+
+	scrollbar = false
+}
+
+# Progress Bar
++ progress_bar {
+	id = "__timeout__"
+	left = 0
+	top = 0
+	height = 15
+	width = 100%
+	show_text = false
+
+	bar_style = "probar_*.png"
+	highlight_style = "probar_hl_*.png"
+}
+
+# Show options
++ hbox {
+	top = 100%-50
+	left = 33%
+	height = 20
+	+ label {
+		text = "Enter: Boot Selection     E: Edit Selection     C: GRUB Commandline" 
+		font = "Inconsolata Regular 16" 
+		color = "#839496" 
+		align = "center"
+	}
+}
